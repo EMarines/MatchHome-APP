@@ -10,7 +10,9 @@
   $: property = data;
 
   function link(clave: string){    
-    linkEB = (`http://localhost:5173/property/${clave}`)
+    // linkEB = (`http://localhost:5173/property/${clave}`)
+    linkEB = (`https://match-home-app.vercel.app/property/${clave}`)
+
   }
 
 </script>
