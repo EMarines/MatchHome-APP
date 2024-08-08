@@ -18,7 +18,7 @@
   <ul class="navig">
 
     <li>
-      <a href="/properties">Propiedades</a>
+      <a href="/properties">Propiedadesssss</a>
     </li>
     <li>
       <a href="/about">About Us</a>

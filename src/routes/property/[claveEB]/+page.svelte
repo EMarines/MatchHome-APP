@@ -5,12 +5,12 @@
 
   export let data: PageData;
 
-  // let linkEB = "";
+  let linkEB = "";
 
   $: property = data;
 
   function link(clave: string){    
-    goto(`http://localhost:5173/property/${clave}`)
+    linkEB = (`http://localhost:5173/property/${clave}`)
   }
 
 </script>
@@ -45,7 +45,9 @@
     <!-- svelte-ignore illegal-attribute-character -->
     <article on:click={link(propert.claveEB)} ok:keypress={()=>{}}>
       <figure class="secunImages">
-        <img src={propert.urlImage} alt={propert.claveEB}/>
+        <a href={linkEB}>
+          <img src={propert.urlImage} alt={propert.claveEB}/>
+        </a>
       </figure>
       <div class="clavePicture">
         <h3>{propert.claveEB}</h3>
@@ -60,7 +62,7 @@
 
   body{
     padding: 20px;
-    background-color: rgb(255, 246, 235);
+    background-color: rgb(255, 255, 255);
   }
 
   .principalImage {
