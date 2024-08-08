@@ -15,28 +15,20 @@
 </svelte:head>
 
 <nav>
-  <ul>
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/contacts">Contactos</a>
-    </li>
+  <ul class="navig">
+
     <li>
       <a href="/properties">Propiedades</a>
     </li>
     <li>
       <a href="/about">About Us</a>
     </li>
-      <a href="/login">Login</a>
-    <li>
-    </li>
   </ul>
 </nav>
 
-{#if data.user}
+<!-- {#if data.user}
   <h2>Logged by {data.user.name}</h2>
-{/if}
+{/if} -->
 
 <slot/>
 
@@ -47,9 +39,16 @@
     padding: 1rem;
   }
 
-  ul {
+  ul{
     display: flex;
     justify-content: space-around;
+  }
+  
+  li {
+    display: flex;
+    width: auto;
+    padding: 0;
+    align-content: center;
   }
 
   a {
@@ -57,9 +56,6 @@
     text-decoration: none;
   }
 
-  nav a:hover {
-    text-decoration: underline;
-    color:rgb(255, 2, 2)
-  } 
+
 
 </style>
