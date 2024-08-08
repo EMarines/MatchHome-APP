@@ -42,7 +42,8 @@
     {#each data.properties as propert}
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <article on:click={link(propert.claveEB)}>
+    <!-- svelte-ignore illegal-attribute-character -->
+    <article on:click={link(propert.claveEB)} ok:keypress={()=>{}}>
       <figure class="secunImages">
         <img src={propert.urlImage} alt={propert.claveEB}/>
       </figure>
@@ -59,7 +60,7 @@
 
   body{
     padding: 20px;
-    background-color: bisque;
+    background-color: rgb(255, 246, 235);
   }
 
   .principalImage {
